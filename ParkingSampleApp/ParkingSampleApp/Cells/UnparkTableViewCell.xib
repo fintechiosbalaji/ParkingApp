@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="190" id="KGk-i7-Jjw" customClass="UnparkTableViewCell" customModule="ParkingApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="deO-Dm-MX6">
+                        <rect key="frame" x="16" y="16" width="288" height="150"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Gcw-hC-dZw">
+                                <rect key="frame" x="0.0" y="0.0" width="288" height="150"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8t-XE-GwX">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="100"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVf-Ub-6UF">
+                                        <rect key="frame" x="0.0" y="105" width="288" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJH-cP-SnI">
+                                        <rect key="frame" x="0.0" y="110" width="288" height="40"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="5HM-Dw-Ygb"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Unpark Vehicle"/>
+                                        <connections>
+                                            <action selector="unparkActn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nLC-B5-X2v"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Gcw-hC-dZw" firstAttribute="top" secondItem="deO-Dm-MX6" secondAttribute="top" id="7dz-86-7xR"/>
+                            <constraint firstAttribute="height" constant="150" id="Fsk-dR-JVm"/>
+                            <constraint firstItem="Gcw-hC-dZw" firstAttribute="leading" secondItem="deO-Dm-MX6" secondAttribute="leading" id="gYF-wJ-rBi"/>
+                            <constraint firstAttribute="trailing" secondItem="Gcw-hC-dZw" secondAttribute="trailing" id="mo0-6S-Xuv"/>
+                            <constraint firstAttribute="bottom" secondItem="Gcw-hC-dZw" secondAttribute="bottom" id="zEs-y9-XKJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="deO-Dm-MX6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="DJ8-Eh-C1a"/>
+                    <constraint firstAttribute="trailing" secondItem="deO-Dm-MX6" secondAttribute="trailing" constant="16" id="O2D-jB-D1P"/>
+                    <constraint firstAttribute="bottom" secondItem="deO-Dm-MX6" secondAttribute="bottom" constant="16" id="cqo-t5-SDx"/>
+                    <constraint firstItem="deO-Dm-MX6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="een-lC-7Jl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="categoryNo" destination="bVf-Ub-6UF" id="tsD-bB-ORg"/>
+                <outlet property="ticketNo" destination="M8t-XE-GwX" id="SYV-Dl-e0q"/>
+                <outlet property="unparkBtn" destination="FJH-cP-SnI" id="UyW-kX-JbA"/>
+            </connections>
+            <point key="canvasLocation" x="138.93129770992365" y="71.126760563380287"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

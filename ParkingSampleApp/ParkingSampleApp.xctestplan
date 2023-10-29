@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "8ACFFAA5-0E1E-4216-8B28-DF751D0DADDF",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:ParkingSampleApp.xcodeproj",
+      "identifier" : "AD5EFD772AEE29070013D3C1",
+      "name" : "ParkingSampleApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ParkingSampleApp.xcodeproj",
+        "identifier" : "AD5EFD902AEE29080013D3C1",
+        "name" : "ParkingSampleAppTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:ParkingSampleApp.xcodeproj",
+        "identifier" : "AD5EFD9A2AEE29080013D3C1",
+        "name" : "ParkingSampleAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

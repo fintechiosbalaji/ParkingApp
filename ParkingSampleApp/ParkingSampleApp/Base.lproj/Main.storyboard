@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n1y-WO-mN1">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Location Selection View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="LocationSelectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LocationSelectionViewController" customModule="ParkingSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hNN-Wq-81K">
+                                <rect key="frame" x="60.666666666666657" y="366" width="271.66666666666674" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eyj-C5-BMT">
+                                        <rect key="frame" x="0.0" y="0.0" width="271.66666666666669" height="52"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Theatre"/>
+                                        <connections>
+                                            <action selector="selectParkingActn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rg8-Xp-DRq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LE-un-s3a">
+                                        <rect key="frame" x="0.0" y="68" width="271.66666666666669" height="52"/>
+                                        <color key="backgroundColor" systemColor="linkColor"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Mall"/>
+                                        <connections>
+                                            <action selector="selectParkingActn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="68g-Ex-Hcv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="MF5-38-eGW"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where to Park ?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fyv-5F-Tp7">
+                                <rect key="frame" x="42.333333333333343" y="253" width="308.33333333333326" height="49"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="41"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hNN-Wq-81K" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1pp-57-pAJ"/>
+                            <constraint firstItem="Fyv-5F-Tp7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="9Io-A6-Bye"/>
+                            <constraint firstItem="hNN-Wq-81K" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.69084" id="FLQ-vv-BP3"/>
+                            <constraint firstItem="hNN-Wq-81K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PbZ-dy-y0j"/>
+                            <constraint firstItem="Fyv-5F-Tp7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lgG-4f-XfV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vmq-24-czq"/>
+                    <connections>
+                        <outlet property="mallBtn" destination="0LE-un-s3a" id="Q9D-hF-ziZ"/>
+                        <outlet property="theatreBtn" destination="Eyj-C5-BMT" id="Pz8-Du-fjN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="cfP-QX-GhD">
+            <objects>
+                <viewController storyboardIdentifier="VehicleEntryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4yv-2k-Gkd" customClass="VehicleEntryViewController" customModule="ParkingSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RoO-rf-hvo">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JkC-Xt-OcJ">
+                                <rect key="frame" x="84" y="319" width="225" height="50"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="o2c-S3-xPC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Park"/>
+                                <connections>
+                                    <action selector="parkAction:" destination="4yv-2k-Gkd" eventType="touchUpInside" id="1H9-Mi-fQW"/>
+                                    <action selector="selectParkingActn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iaW-Eo-YIy"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Vehicle" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cus-do-UMf">
+                                <rect key="frame" x="16" y="237" width="361" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Xaa-5H-dZk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ajt-8F-xIZ">
+                                <rect key="frame" x="16" y="135" width="361" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBh-S6-Qyj">
+                                        <rect key="frame" x="0.0" y="1" width="113.66666666666667" height="68.333333333333329"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="scooter" catalog="system"/>
+                                        <connections>
+                                            <action selector="selectVehicle:" destination="4yv-2k-Gkd" eventType="touchUpInside" id="Ofw-Nn-l2m"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAc-8p-Qms">
+                                        <rect key="frame" x="123.66666666666666" y="1.3333333333333357" width="113.66666666666666" height="67.333333333333314"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="car" catalog="system"/>
+                                        <connections>
+                                            <action selector="selectVehicle:" destination="4yv-2k-Gkd" eventType="touchUpInside" id="M69-iI-AtT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTY-bk-54h">
+                                        <rect key="frame" x="247.33333333333329" y="-0.3333333333333286" width="113.66666666666666" height="71"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="bus.fill" catalog="system"/>
+                                        <connections>
+                                            <action selector="selectVehicle:" destination="4yv-2k-Gkd" eventType="touchUpInside" id="jvP-RQ-fGr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Hmt-g4-1yA"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mmp-ce-ilH"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JkC-Xt-OcJ" firstAttribute="centerX" secondItem="RoO-rf-hvo" secondAttribute="centerX" id="2If-ly-GqP"/>
+                            <constraint firstItem="Ajt-8F-xIZ" firstAttribute="trailing" secondItem="cus-do-UMf" secondAttribute="trailing" id="3q0-VH-1GH"/>
+                            <constraint firstItem="JkC-Xt-OcJ" firstAttribute="top" secondItem="cus-do-UMf" secondAttribute="bottom" constant="32" id="Fj6-Dn-w4z"/>
+                            <constraint firstItem="cus-do-UMf" firstAttribute="top" secondItem="Ajt-8F-xIZ" secondAttribute="bottom" constant="32" id="TBU-l7-ImP"/>
+                            <constraint firstItem="mmp-ce-ilH" firstAttribute="trailing" secondItem="cus-do-UMf" secondAttribute="trailing" constant="16" id="TJf-yr-SCN"/>
+                            <constraint firstItem="Ajt-8F-xIZ" firstAttribute="leading" secondItem="cus-do-UMf" secondAttribute="leading" id="XkP-BX-PKl"/>
+                            <constraint firstItem="cus-do-UMf" firstAttribute="centerX" secondItem="RoO-rf-hvo" secondAttribute="centerX" id="eOY-gi-0dG"/>
+                            <constraint firstItem="cus-do-UMf" firstAttribute="leading" secondItem="mmp-ce-ilH" secondAttribute="leading" constant="16" id="fIV-7j-NDu"/>
+                            <constraint firstItem="JkC-Xt-OcJ" firstAttribute="width" secondItem="RoO-rf-hvo" secondAttribute="width" multiplier="0.573028" id="hsQ-vI-vgx"/>
+                            <constraint firstItem="Ajt-8F-xIZ" firstAttribute="top" secondItem="mmp-ce-ilH" secondAttribute="top" constant="32" id="qei-et-BIm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="8Vs-Jz-wkM">
+                        <barButtonItem key="rightBarButtonItem" title="Unpark List" id="xGC-xB-lXL" userLabel="unparkList">
+                            <color key="tintColor" systemColor="systemOrangeColor"/>
+                            <connections>
+                                <action selector="unParkActn:" destination="4yv-2k-Gkd" id="F5j-jn-P01"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="busButton" destination="qTY-bk-54h" id="DgD-Rb-hb7"/>
+                        <outlet property="carButton" destination="cAc-8p-Qms" id="Qro-SY-rA1"/>
+                        <outlet property="parkButton" destination="JkC-Xt-OcJ" id="9OV-sJ-cSD"/>
+                        <outlet property="scooterButton" destination="HBh-S6-Qyj" id="rwt-WU-YRp"/>
+                        <outlet property="vehicleTypeTextField" destination="cus-do-UMf" id="P8K-dm-av6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Wa-eY-vRe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789" y="4"/>
+        </scene>
+        <!--Vehicle List View Controller-->
+        <scene sceneID="qRD-QK-vY0">
+            <objects>
+                <viewController storyboardIdentifier="VehicleListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ipN-fw-PaU" customClass="VehicleListViewController" customModule="ParkingSampleApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="md6-W3-Z2o">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EQq-uP-WEn">
+                                <rect key="frame" x="0.0" y="109" width="393" height="743"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yr5-I9-9KV">
+                                <rect key="frame" x="0.0" y="59" width="393" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sxf-69-FW1"/>
+                                </constraints>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ipN-fw-PaU" id="Y59-bN-XK8"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iTr-qK-GiQ"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yr5-I9-9KV" firstAttribute="trailing" secondItem="EQq-uP-WEn" secondAttribute="trailing" id="86m-QG-si6"/>
+                            <constraint firstItem="EQq-uP-WEn" firstAttribute="leading" secondItem="iTr-qK-GiQ" secondAttribute="leading" id="Rfd-Rs-mIo"/>
+                            <constraint firstItem="Yr5-I9-9KV" firstAttribute="top" secondItem="iTr-qK-GiQ" secondAttribute="top" id="U11-a0-23A"/>
+                            <constraint firstItem="Yr5-I9-9KV" firstAttribute="leading" secondItem="EQq-uP-WEn" secondAttribute="leading" id="aqj-X8-1tj"/>
+                            <constraint firstItem="EQq-uP-WEn" firstAttribute="top" secondItem="Yr5-I9-9KV" secondAttribute="bottom" id="bkF-bd-RsL"/>
+                            <constraint firstAttribute="bottom" secondItem="EQq-uP-WEn" secondAttribute="bottom" id="e1n-eE-ZjN"/>
+                            <constraint firstItem="EQq-uP-WEn" firstAttribute="trailing" secondItem="iTr-qK-GiQ" secondAttribute="trailing" id="tem-cI-61I"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="Yr5-I9-9KV" id="eIo-Go-94A"/>
+                        <outlet property="tableView" destination="EQq-uP-WEn" id="Vsm-Nx-ePI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nuB-ug-3fZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2510.6870229007632" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tPy-Hv-CfN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n1y-WO-mN1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3X2-wA-tNL">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ocn-eZ-66e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="asG-GD-9zO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bus.fill" catalog="system" width="128" height="122"/>
+        <image name="car" catalog="system" width="128" height="95"/>
+        <image name="scooter" catalog="system" width="128" height="94"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
