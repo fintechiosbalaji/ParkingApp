@@ -19,7 +19,7 @@ class VehicleEntryViewController: UIViewController {
             self.parkButton.roundCorners(radius: 10)
         }
     }
-    @IBOutlet weak var vehicleTypeTextField: UITextField!
+    @IBOutlet weak var vehicleTypeLbl: UILabel!
     
     var selectedVehicleType: VehicleType?
     private var entryTime: Date?
@@ -49,7 +49,7 @@ class VehicleEntryViewController: UIViewController {
         }
         sender.tintColor = .orange
         parkButton.backgroundColor = .orange
-        vehicleTypeTextField.text = self.selectedVehicleType?.rawValue
+        vehicleTypeLbl.text = self.selectedVehicleType?.rawValue
     }
     
     // Handle "Unpark" action
@@ -57,13 +57,6 @@ class VehicleEntryViewController: UIViewController {
         if let vc = self.storyboard?.instantiateViewController(withIdentifier: "VehicleListViewController") as?  VehicleListViewController {
             navigationController?.pushViewController(vc, animated: true)
         }
-    }
-    
-    // Handle "Done" button tap
-    @objc func doneButtonTapped() {
-        vehicleTypeTextField.text = selectedVehicleType?.rawValue
-        // Dismiss the picker
-        vehicleTypeTextField.resignFirstResponder()
     }
     
     // Handle submission of vehicle entry

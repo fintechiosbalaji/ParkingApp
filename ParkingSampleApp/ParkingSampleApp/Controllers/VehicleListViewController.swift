@@ -28,7 +28,7 @@ class VehicleListViewController: UIViewController, UISearchBarDelegate {
     func setupSearchController() {
         searchBar.delegate = self
         searchBar.placeholder = "Search Vehicles"
-    
+        searchBar.searchTextField.keyboardType = .numberPad
         searchBar.searchTextField.textColor = .white
         searchBar.backgroundColor = .black
         if let placeholderLabel = searchBar.searchTextField.value(forKey: "placeholderLabel") as? UILabel {

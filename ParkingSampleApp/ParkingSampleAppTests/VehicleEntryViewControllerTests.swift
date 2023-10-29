@@ -31,7 +31,7 @@ final class VehicleEntryViewControllerTests: XCTestCase {
         // Assert that selectedVehicleType and UI changes are as expected
         XCTAssertEqual(viewController.scooterButton.tintColor, .orange)
         XCTAssertEqual(viewController.parkButton.backgroundColor, .orange)
-        XCTAssertEqual(viewController.vehicleTypeTextField.text, "")
+        XCTAssertEqual(viewController.vehicleTypeLbl.text, "")
     }
     
     func testUnParkActn() {
